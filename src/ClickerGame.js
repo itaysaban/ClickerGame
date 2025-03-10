@@ -1,5 +1,6 @@
 import { clear } from "@testing-library/user-event/dist/clear";
 import { useState, useEffect, useSyncExternalStore } from "react";
+import './App.css'
 
 function ClickerGame() {
 
@@ -23,7 +24,6 @@ function ClickerGame() {
 
     }
 
-//comment
 
     const stopGame = () => {
       setPoints(0);
@@ -77,9 +77,10 @@ function ClickerGame() {
 
     return (
         <div style={{ textAlign: "center", marginTop: "50px" }}>
-          <h1>Clicker Game</h1>
+          <h1 id="title">Clicker Game</h1>
+          <div id="game-background">
           {timer === 0 || timer === null ? null : (
-            <h2>
+            <h2 id="time">
               {countDown !== null && countDown > 0 ? (
                 `Go in: ${countDown}`
               ) : (
@@ -104,6 +105,7 @@ function ClickerGame() {
           </button>
           {(timer !== null) &&
           <button onClick={stopGame}>Reset</button>}
+          </div>
         </div>
       );
     };
