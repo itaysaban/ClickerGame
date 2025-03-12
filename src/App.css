@@ -16,9 +16,84 @@ body{
   font-family: 'Courier New', Courier, monospace;
 }
 
-#game-background{
+.game-background{
 background-color: peachpuff;
 padding: 50px;
 border-style: solid;
 border-radius: 20px ;
+}
+
+.difficulties{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#easy, #medium, #hard{
+  width: 60px;               /* Make width and height the same for a perfect circle */
+  height: 60px;
+  border-radius: 50%;         /* Makes the buttons circular */
+  border: 2px solid black;
+  background-color: lightblue;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace ;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;   
+}
+
+#easy{
+  background-color: lightgreen;
+}
+
+#medium{
+  background-color: lightseagreen;
+}
+
+#hard{
+  background-color: lightcoral;
+}
+
+
+.gameButtons{
+  display: flex;
+  justify-content: space-around; /* Spreads them apart */
+  align-items: center; 
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+#startGame{
+background-color: gold;
+height: 40px;
+border-radius: 30px;
+padding: 20px;
+font-family: 'myFont', sans-serif;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 10px; 
+
+}
+
+#clickMe {
+  background-color: gold;
+height: 40px;
+border-radius: 30px;
+padding: 20px;
+font-family: 'myFont', sans-serif;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 10px; 
+}
+
+#reset{
+  color: white;
+  background-color: crimson;
+  gap: 40px;
 }

@@ -1,6 +1,6 @@
 import { clear } from "@testing-library/user-event/dist/clear";
 import { useState, useEffect, useSyncExternalStore } from "react";
-import './App.css'
+import './ClickerGame.css'
 
 function ClickerGame() {
 
@@ -78,7 +78,7 @@ function ClickerGame() {
     return (
         <div style={{ textAlign: "center", marginTop: "50px" }}>
           <h1 id="title">Clicker Game</h1>
-          <div id="game-background">
+          <div class="game-background">
           {timer === 0 || timer === null ? null : (
             <h2 id="time">
               {countDown !== null && countDown > 0 ? (
@@ -93,18 +93,22 @@ function ClickerGame() {
           {(timer === null || timer === 0) && (
                 <div>
               <h3>Choose difficulty:</h3>
-              <button onClick={() => setGameDifficulty("Easy")}>Easy</button>
-              <button onClick={() => setGameDifficulty("Medium")}>Medium</button>
-              <button onClick={() => setGameDifficulty("Hard")}>Hard</button>
+                <div class="difficulties">
+                  <button id="easy" onClick={() => setGameDifficulty("Easy")}>Easy</button>
+                  <button id="medium" onClick={() => setGameDifficulty("Medium")}>Medium</button>
+                  <button id="hard" onClick={() => setGameDifficulty("Hard")}>Hard</button>
+                </div>
               </div>)}
-          <button onClick={startGame} disabled={timer !== null && timer > 0} >
-            Start Game
-          </button>
-          <button onClick={addPoints} disabled={(timer === 0 || timer === null)|| countDown !== null}>
-            Click Me!
+          <div class="gameButtons">
+            <button id="startGame" onClick={startGame} disabled={timer !== null && timer > 0} >
+              Start Game
+            </button>
+            <button id="clickMe" onClick={addPoints} disabled={(timer === 0 || timer === null)|| countDown !== null}>
+              Click Me!
           </button>
           {(timer !== null) &&
-          <button onClick={stopGame}>Reset</button>}
+          <button id="reset" onClick={stopGame}>Reset</button>}
+          </div>
           </div>
         </div>
       );
