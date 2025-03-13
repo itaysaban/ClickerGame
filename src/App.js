@@ -1,6 +1,7 @@
 import ClickerGame from "./ClickerGame";
 import MainMenu from "./MainMenu";
-import './App.css';
+import './MainMenu.css';
+import './ClickerGame.css';
 import { useState } from "react";
 
 const App = () => {
