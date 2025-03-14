@@ -1,6 +1,7 @@
 import { clear } from "@testing-library/user-event/dist/clear";
 import { useState, useEffect, useSyncExternalStore } from "react";
 import './ClickerGame.css'
+import LeaderBoard from './LeaderBoard.js'
 
 function ClickerGame() {
 
@@ -8,6 +9,7 @@ function ClickerGame() {
     const [points, setPoints] = useState(0);
     const [countDown, setCountDown] = useState(null);
     const [difficulty, setDifficulty] = useState(null);
+    const [currentPoints, setCurrentPoints] = useState(0)
 
     const startGame = () => {
       setPoints(0);
@@ -74,7 +76,6 @@ function ClickerGame() {
     }, [timer]);
 
 
-
     return (
         <div style={{ textAlign: "center", marginTop: "50px" }}>
           <h1 id="title">Clicker Game</h1>
@@ -106,6 +107,7 @@ function ClickerGame() {
             <button id="clickMe" onClick={addPoints} disabled={(timer === 0 || timer === null)|| countDown !== null}>
               Click Me!
           </button>
+          <LeaderBoard currentPoints={currentPoints} />
           {(timer !== null) &&
           <button id="reset" onClick={stopGame}>Reset</button>}
           </div>
