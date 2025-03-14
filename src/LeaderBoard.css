@@ -1,0 +1,45 @@
+/* Importing the font from the external source */
+@import url('https://fonts.cdnfonts.com/css/games');
+
+
+/* Container for the leaderboard */
+.leaderboard {
+    position: fixed; /* Fixes it on the right side of the screen */
+    top: 20px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the right side */
+    background-color: rgba(13, 7, 66, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px; /* Set a fixed width for the leaderboard */
+    max-height: 500px; /* Limit the height */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Optional: Adds a shadow around the leaderboard */
+    margin-top: 30px;
+    border: solid black;
+}
+
+/* Styling for the leaderboard title */
+.leaderboardtitle {
+    text-align: center;
+    font-size: 1.5em;
+    font-family:'Games';
+    margin-top: 10px;
+    color: cyan;
+}
+
+/* Styling for the leaderboard list */
+#scorelist{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leaderboard-item {
+    font-size: 1em;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    text-align: center;
+}
